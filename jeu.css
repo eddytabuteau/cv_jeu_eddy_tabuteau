@@ -1,0 +1,416 @@
+/*mise en forme menu principal */
+body{
+    background-color: rgb(21, 19, 81);
+ 
+}
+nav{
+   position: relative;
+   height: 30px;
+   margin-bottom: 7%;
+   margin-left: -5%;
+}
+nav a{
+    position: absolute;
+    width: 11%;
+    z-index: 1;
+    text-transform: uppercase; 
+    text-decoration: none; 
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 82%;
+}
+nav a:nth-child(1){
+    left: 10%;  
+}
+a:nth-child(2){
+    left: 35%;
+}
+a:nth-child(3){
+    left: 60%; 
+}
+a:nth-child(4){
+    left: 85%;
+}
+.animation{
+    display: inline;
+    position: absolute;
+    left: 10%;
+    height: 60%;
+    width: 11%;
+    background-color: #3498db;
+    transition: all .5s ease-out;
+    border-radius: 8px;
+    z-index: 0;
+}
+a:nth-child(2):hover~.animation{
+    display: inline;
+    position: absolute;
+    left: 35%;
+    height: 60%;
+    width: 11%;
+    background-color: #9b59b6;
+    transition: all .5s ease-out;
+    border-radius: 8px;
+    z-index: 0;
+}
+a:nth-child(3):hover~.animation{
+    display: inline;
+    position: absolute;
+    left: 60%;
+    height: 60%;
+    width: 11%;
+    background-color: #6b8d9b;
+    transition: all .5s ease-out;
+    border-radius: 8px;
+    z-index: 0;
+}
+a:nth-child(4):hover~.animation{
+    display: inline;
+    position: absolute;
+    left: 85%;
+    height: 60%;
+    width: 11%;
+    background-color: #b68b59;
+    transition: all .5s ease-out;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+
+
+/*conteneur du jeu*/
+#jeu-cv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#jeu-cv h2{
+    color: white;
+    background-color: #9c59b6cc;
+    border-radius: 8px;
+    padding: 5px;
+}
+#instruction{
+    
+    margin: 18%;
+    margin-top: 2%;
+    position: relative;
+}
+#backgroud-jeu{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 50px 30px rgb(204, 0, 255,0.75);
+}
+
+/* section pour contact*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact h2{
+    color: white;
+    background-color: #9c59b6cc;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 50%;
+    text-transform: uppercase;
+}
+#contact-container {
+  
+    width: 64%;
+    box-shadow: 0px 0px 50px 30px rgb(204, 0, 255,0.75);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/****MISE EN PLACE DU PERSO****/
+#masqueUn{
+    position: absolute;
+    height: 110px;
+    width: 82px;
+    overflow: hidden;
+    bottom:50px;
+    left : 0;
+    z-index: 2;
+  }
+
+ #personnage{
+    position: absolute;
+    bottom: -369px;
+    left : -7px
+}
+/***MISE EN PLACE DE DRACAUFEU*****/
+#masqueDracaufeu{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    bottom:30px;
+    right : 0;
+  }
+
+ #dracaufeu{
+    height: 97%;
+    width: 99%;
+}
+
+/***MISE EN PLACE DU COMPTEUR DE DEGATS*****/
+#degat{
+    position: absolute;
+    top: 26%;
+    left: 40%;
+    color: white;
+    font-size:1.3em;  
+}
+#compteur{
+    color: red;
+    font-size:3em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+/***MISE EN PLACE DE LA BOULE DE FEU*****/
+
+#masqueBouleDeFeu{
+    position: absolute;
+    height: 30px;
+    width: 90px;
+    bottom: 100px;
+    left: 80px;
+  }
+
+ #bouleDeFeu{
+    position: absolute;
+    height: 30px;
+    width: 90px;
+}
+
+
+
+/***MISE EN PLACE DE la barre de VIE*****/
+
+#barreDeVie{
+    position: absolute;
+    bottom: 253px;
+    right: 60px;
+}
+
+#barreDeVie meter{
+    height: 47px;
+    width: 185px;
+}
+
+
+
+/***MISE EN PLACE DE L'EXPLOSION*****/
+#masqueExplosion{
+    position: absolute;
+    height: 172px;
+    width: 172px;
+    overflow: hidden;
+    bottom: 30px;
+    right: 60px;
+  }
+
+ #explosion{
+    height: 483px;
+    width: 600px;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+}
+/***MISE EN PLACE DU CV***/
+#masqueIconeCv{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    bottom: 30px;
+    right: 0px;
+    
+    z-index: 2;
+  }
+
+ #iconeCv{
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    top: 64px;
+    left: 101px;
+}
+
+#masqueVortex{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    bottom:30px;
+    right : 0;
+    z-index: 1;
+  }
+
+ #vortex{
+    height: 200px;
+    width: 300px;
+}
+
+/*fin du jeu message*/
+
+.messageFin{
+    background-color: rgba(255, 255, 255, 0.623);
+    height: 200px;
+    width: 40%;
+    position: absolute;
+    top:30%;
+    left:30%;
+    display: flex;
+    flex-wrap: wrap;
+    border:3px solid #9c59b6cc;
+    border-radius: 5px;
+    
+}
+
+.messageFin div{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.messageDeFin{
+    text-transform: uppercase;
+    font-size: 2em;
+
+}
+
+.bouton{
+    text-transform: uppercase;
+    background-color: #9c59b657;
+    font-size:1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.bouton:hover{
+    text-transform: uppercase;
+    background-color: #9c59b6;
+    box-shadow: 0px 0px 20px 10px rgba(195, 0, 255, 0.493);
+    font-size:1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*bouton play*/
+#messageDebut{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;  
+}
+
+
+.boutonplay{
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 50%;
+    height: 60px;
+    width: 50px;
+}
+.boutonplay:hover{
+    box-shadow: 0px 0px 20px 10px rgba(195, 0, 255, 0.493);
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+/*Instruction boule de feu et déplacement*/
+
+#touche{
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+    border:3px solid #9c59b6cc;
+}
+
+#validation{
+    height: 60px;
+    width: 50px;
+   border-radius: 50%;
+}
+
+#validation:hover{
+    box-shadow: 0px 0px 20px 10px rgba(195, 0, 255, 0.493);
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/*contact*****/
+
+#picture{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+#picture img{
+    margin: auto;
+    width: 50%;
+    border-radius: 50%;
+}
+#boite{
+    flex-basis: 50%;  
+}
+
+#boite img{
+    border-radius: 50%;
+    width: 15%;
+    padding-top: 1%; 
+}
+
+#boite img:hover{
+    box-shadow: 0px 0px 20px 10px rgba(195, 0, 255, 0.493);
+    border-radius: 50%;
+    background-color: rgba(195, 0, 255, 0.493) ;
+}
+#boite div{
+position: relative;
+}
+
+#telephone{
+    position: relative;
+}
+
+#telephone:hover span::after{
+    content: "06.21.02.58.78";
+    position: absolute;
+    top: 36%;
+    left: 18%;
+    color: white;
+    font-size: 1.1em;   
+}
+
+#linkedin img{
+    width: 20%;
+    margin-left: -2.5%;
+    margin-top: -2.5%;
+    margin-bottom: -2.5%;
+}
+
+#mail img{
+    width: 17%;
+    margin-left: -1%;
+}
